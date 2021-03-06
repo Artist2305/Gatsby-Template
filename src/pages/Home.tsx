@@ -1,7 +1,10 @@
 import React from "react"
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <p>This is awesome gatsby static site template!</p>
+    <Layout>
+        <p>This is awesome gatsby static site template!</p>
+    </Layout>
   );
 }
