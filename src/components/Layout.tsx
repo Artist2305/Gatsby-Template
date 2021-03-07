@@ -1,6 +1,11 @@
 import React from "react"
 import styled, { css } from 'styled-components';
 import tw from 'twin.macro'; // eslint-disable-line import/no-extraneous-dependencies
+import { ThemeProvider } from 'styled-components';
+import * as Theme from './../theme/theme';
+import GlobalStyles from './../theme/globalStyles';
+import { useSelector, useDispatch } from 'react-redux';
+import { uiSelector } from '../state/ui';
 import {
   LogoIcon,
   FacebookIcon,
@@ -9,7 +14,6 @@ import {
   LinkedinIcon
 } from '../components/icons/index';
 import { Link } from 'gatsby';
-
 
 const navLinks = [
   {id: 1, name: "Home", slug: "/Home"},
@@ -30,14 +34,33 @@ const footerLinks = [
   {id: 9, name: "Privacy", slug: "/Privacy"},
 ]
 
-
+const AppWrapper = tw.div`
+  flex flex-col items-center 
+`
+const Wrapper = tw.div`
+  flex flex-col container px-3 sm:px-10 
+`;
 
 const links = navLinks.map(s => <a key={s.id} href={s.slug}>{s.name}</a>);
 const fotLinks = footerLinks.map(s => <a key={s.id} href={s.slug}>{s.name}</a>);
+
 export default function Layout({ children }) {
+
+  const { themeMode } = useSelector(uiSelector);
   return (
-    <div>
-      {children}
-    </div>
+    <ThemeProvider theme={Theme[themeMode]}>
+      <GlobalStyles/>
+      <AppWrapper>
+        <Wrapper>
+    
+        </Wrapper>
+        <Wrapper>
+          {children}
+        </Wrapper>
+        <Wrapper>
+
+        </Wrapper>
+      </AppWrapper>
+    </ThemeProvider>
   )
 }

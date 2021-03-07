@@ -5,6 +5,7 @@ module.exports = {
     author: `Mateusz Szostek`
   },
   plugins: [
+    "gatsby-plugin-postcss",
     "gatsby-plugin-styled-components",
     'gatsby-plugin-typescript',
     "gatsby-plugin-image",
