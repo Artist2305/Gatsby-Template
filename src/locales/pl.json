@@ -1,0 +1,10 @@
+{
+    "home" : "Strona Główna",
+    "blog" : "Blog",
+    "galleries" :  "Galerie",
+    "grids" : "Siatki", 
+    "menus" : "Menus", 
+    "footers" : "Footers",
+    "dark" : "Ciemny",
+    "light" : "Jasny"
+}

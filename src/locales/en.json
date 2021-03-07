@@ -1,0 +1,10 @@
+{
+    "home" : "Home",
+    "blog" : "Blog",
+    "galleries" :  "Galleries",
+    "grids" : "Grids", 
+    "menus" : "Menus", 
+    "footers" : "Footers",
+    "dark" : "Dark",
+    "light" : "Light"
+}
