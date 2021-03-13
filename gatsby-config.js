@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Static Website Starter | Gatsby + Typescript + Tailwind CSS + Styled-Components Starter",
+    title: "Static Website Starter",
     description: `Typescript + Tailwind CSS + Styled-Components + starter to kickoff your project.`,
-    author: `Mateusz Szostek`
+    author: `Mateusz Szostek`,
+    keywords: `gatsby, template`
   },
   plugins: [
     "gatsby-plugin-postcss",
