@@ -57,8 +57,8 @@ const Header = tw.div`
   flex flex-row items-center 
 `;
 
-const Logo = tw.div`
-w-16 h-16 bg-indigo-300 mr-2
+const Logo = tw(LogoIcon)`
+w-16 h-16 mr-2
 `;
 
 const OptionsWrapper = tw.div`
