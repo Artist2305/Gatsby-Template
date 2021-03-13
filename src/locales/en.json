@@ -6,5 +6,16 @@
     "menus" : "Menus", 
     "footers" : "Footers",
     "dark" : "Dark",
-    "light" : "Light"
+    "light" : "Light",
+    "name" : "Name",
+    "emailAddress" : "Email Address",
+    "message" : "Message",
+    "send" : "Send",
+    "formTitle" : "FEEL FREE TO CONTACT ME",
+    "siteMapTitle" : "SITE MAP",
+    "subscribeTitle" : "SUBSCRIBE",
+    "socialMediaTitle" : "SOCIAL MEDIA",
+    "subscribe" : "Subscribe"
+
+
 }

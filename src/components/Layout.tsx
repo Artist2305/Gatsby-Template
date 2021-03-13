@@ -16,7 +16,7 @@ import {
   LinkedinIcon
 } from '../components/icons/index';
 
-import {H1} from "./typography";
+import {H1, H3} from "./typography";
 
 const AppWrapper = tw.div`
   flex flex-col items-center 
@@ -28,9 +28,26 @@ const Wrapper = tw.div`
 const TopWrapper = tw(Wrapper)`
   bg-white bg-opacity-30 flex-row  rounded-md
 `;
+const BottomWrapper = tw.div`
+  py-5 grid gap-6  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 container
+`;
 
-const NavLink = tw(GatsbyLink)`
+const LinksWrapper = tw.div`
+  grid py-2 grid-cols-2 
+`;
+const SocialMediaWrapper = tw.div`
+  flex flex-col gap-3
+`
+
+const SocialMediaRow = tw.div`
+  flex flex-row gap-3
+`
+
+const NavLink = tw(Link)`
   mx-2
+`;
+const FooterLink = tw(Link)`
+  text-base font-semibold
 `;
 
 const NavBar = tw.div`
@@ -54,6 +71,39 @@ const LangLink = tw(GatsbyLink)`
 const ThemeBtn = tw.button`
   font-semibold
 `;
+
+const FooterWrapper = styled.footer(() =>
+  tw`w-full flex flex-row justify-center p-3`, 
+  css`
+    background-color: ${({ theme }) => theme.colors.elementColor}; 
+  `
+);
+
+const FooterTitle  = tw.div`
+flex flex-col 
+`;
+
+const Btn = tw.button`
+  bg-gradient-to-t from-purple-400 to-indigo-400 inline-block w-28 h-8 my-2 text-white rounded-sm font-bold tracking-wider
+`;
+
+const TextInput = styled.input(() => 
+  tw`rounded-sm p-1 outline-none`,
+  css`
+    background-color: ${({ theme }) => theme.colors.formColor};
+  `
+);
+const TextArea = styled.textarea(() =>
+  tw`rounded-sm p-1 outline-none`,
+  css`
+    background-color: ${({theme}) => theme.colors.formColor};
+  `
+);
+
+const FormLabel = tw.label`
+  py-1 font-semibold
+`;
+
 
 export default function Layout({ children }) {
 
@@ -83,7 +133,7 @@ export default function Layout({ children }) {
   ]
 
   const navLinks = navLinksData.map(s => <NavLink key={s.id} to={s.slug}>{s.name}</NavLink>);
-  const fotLinks = footerLinksData.map(s => <NavLink key={s.id} to={s.slug}>{s.name}</NavLink>);
+  const fotLinks = footerLinksData.map(s => <FooterLink key={s.id} to={s.slug}>{s.name}</FooterLink>);
 
   return (
     <ThemeProvider theme={Theme[themeMode]}>
@@ -119,9 +169,49 @@ export default function Layout({ children }) {
         <Wrapper>
           {children}
         </Wrapper>
-        <Wrapper>
-
-        </Wrapper>
+        <FooterWrapper>
+          <BottomWrapper>
+          <form action="POST">
+            <FooterTitle>
+              
+                <H3>{intl.formatMessage({id : "formTitle"})}</H3>
+                <FormLabel>{intl.formatMessage({ id: "name"})}</FormLabel>
+                <TextInput type="text" name="name"/>
+                <FormLabel>{intl.formatMessage({ id: "emailAddress"})}</FormLabel>
+                <TextInput type="text" name="email"/>
+                <FormLabel>{intl.formatMessage({id : "message"})}</FormLabel>
+                <TextArea name="message"/> 
+                <Btn>{intl.formatMessage({id : "send"})}</Btn>
+            </FooterTitle>
+            </form>
+            <FooterTitle>
+              <H3>{intl.formatMessage({id : "siteMapTitle"})}</H3>
+              <LinksWrapper>
+                {fotLinks}
+              </LinksWrapper>
+              
+            </FooterTitle>
+            <FooterTitle>
+              <H3>{intl.formatMessage({id : "subscribeTitle"})}</H3>
+              <FormLabel>{intl.formatMessage({id : "subscribe"})}</FormLabel>
+              <TextInput type="text" name="email"/>
+              <Btn>{intl.formatMessage({id : "subscribe"})}</Btn>
+            </FooterTitle>
+            <FooterTitle>
+              <H3>{intl.formatMessage({id : "socialMediaTitle"})}</H3>
+              <SocialMediaWrapper>
+                <SocialMediaRow>
+                  <FacebookIcon/>
+                  <LinkedinIcon/>
+                  <InstagramIcon/>
+                </SocialMediaRow>
+                <SocialMediaRow>
+                  <TwitterIcon/>
+                </SocialMediaRow>
+              </SocialMediaWrapper>
+            </FooterTitle>
+          </BottomWrapper>
+        </FooterWrapper>
       </AppWrapper>
     </ThemeProvider>
   )
