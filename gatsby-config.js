@@ -8,7 +8,7 @@ module.exports = {
     description: `Typescript + Tailwind CSS + Styled-Components + starter to kickoff your project.`,
     author: `Mateusz Szostek`,
     keywords: `gatsby, template`,
-    siteUrl: `https://www.awesome-gatsby-example.com`
+    siteUrl: `https://awesome-static-gatsby-template.netlify.app/`
   },
   plugins: [
     "gatsby-plugin-postcss",

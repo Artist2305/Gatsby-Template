@@ -32,7 +32,6 @@ const Head: React.FC<HeadProps> = (props) => {
       <title>{data.site.siteMetadata.title + ' | ' + props.title}</title>
       <meta name="keywords" content={props.keywords} />
       <meta name="author" content={props.author} />
-      <base href="http://localhost:8000/" target="_blank" />
       <meta name="description" content={props.description} />
       <meta name="robots" content="index, follow" />
 
