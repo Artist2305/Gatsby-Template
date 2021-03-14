@@ -24,6 +24,9 @@ const AppWrapper = tw.div`
 const Wrapper = tw.div`
   flex flex-col container px-3 sm:p-3
 `;
+const ContentWrapper = tw.div`
+  container py-3
+`;
 
 const TopWrapper = tw(Wrapper)`
   bg-white bg-opacity-30 flex-row  rounded-md
@@ -166,9 +169,9 @@ export default function Layout({ children }) {
             </OptionsWrapper>
           </div>
         </TopWrapper>
-        <Wrapper>
+        <ContentWrapper>
           {children}
-        </Wrapper>
+        </ContentWrapper>
         <FooterWrapper>
           <BottomWrapper>
           <form action="POST">

@@ -15,7 +15,47 @@
     "siteMapTitle" : "SITE MAP",
     "subscribeTitle" : "SUBSCRIBE",
     "socialMediaTitle" : "SOCIAL MEDIA",
-    "subscribe" : "Subscribe"
+    "subscribe" : "Subscribe",
 
+    "homeContent" : [
+        {"text" : "This templates includes following features: "},
+        {"text" : "- Tailwind.css"},
+        {"text" : "- Typescript"},
+        {"text" : "- styled components"},
+        {"text" : "- lazy image loading with gatsby-image"},
+        {"text" : "- react helmet"},
+        {"text" : "- blog pages with pagination"},
+        {"text" : "- multilangual system"},
+        {"text" : "- dark/light mode"},
+        {"text" : "- dark/light mode"},
+        {"text" : "- redux "},
+        {"text" : "- contentful integration"},
+        {"text" : "- firebase integration"},
+        {"text" : "- google analitics"},
+        {"text" : "And following ready to use components:"},
+        {"text" : "- images galery"},
+        {"text" : "- serval responssieve grid systems"},
+        {"text" : "- privacy, cooperation, contact, help, about pages"},
+        {"text" : "- full responsive layout"}
+    ],
+    
+    "homeContent1" : "This templates includes following features: ",
+    "homeContent2" : "- Tailwind.css",
+    "homeContent3" : "- Typescript",
+    "homeContent4" : "- styled components",
+    "homeContent5" : "- lazy image loading with gatsby-image",
+    "homeContent6" : "- react helmet",
+    "homeContent7" : "- blog pages with pagination",
+    "homeContent8" : "- multilangual system",
+    "homeContent9" : "- dark/light mode",
+    "homeContent10" :"- redux ",
+    "homeContent11" :"- contentful integration",
+    "homeContent12" :"- firebase integration",
+    "homeContent13" :"- google analitics",
+    "homeContent14" :"And following ready to use components:",
+    "homeContent15" :"- images galery",
+    "homeContent16" :"- serval responssieve grid systems",
+    "homeContent17" :"- privacy, cooperation, contact, help, about pages",
+    "homeContent18" :"- full responsive layout"
 
 }

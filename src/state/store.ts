@@ -1,7 +1,7 @@
 import { configureStore, combineReducers, Action } from '@reduxjs/toolkit';
 import { ThunkAction } from 'redux-thunk';
-
 import uiReducer from './ui';
+
 
 const rootReducer = combineReducers({
   ui: uiReducer
