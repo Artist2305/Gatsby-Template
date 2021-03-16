@@ -15,6 +15,7 @@ import {
   InstagramIcon,
   LinkedinIcon
 } from '../components/icons/index';
+import SimpleReactLightbox from 'simple-react-lightbox'
 
 import {H1, H3} from "./typography";
 
@@ -142,6 +143,7 @@ export default function Layout({ children }) {
 
   return (
     <ThemeProvider theme={Theme[themeMode]}>
+      <SimpleReactLightbox>
       <GlobalStyles/>
       <AppWrapper>
         <TopWrapper>
@@ -218,6 +220,7 @@ export default function Layout({ children }) {
           </BottomWrapper>
         </FooterWrapper>
       </AppWrapper>
+      </SimpleReactLightbox>
     </ThemeProvider>
   )
 }
