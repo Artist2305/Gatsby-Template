@@ -34,6 +34,8 @@ const Head: React.FC<HeadProps> = (props) => {
       <meta name="author" content={props.author} />
       <meta name="description" content={props.description} />
       <meta name="robots" content="index, follow" />
+      <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      <link href="https://fonts.googleapis.com/css2?family=Lato&family=Righteous&display=swap" rel="stylesheet"/>
 
     </Helmet>
   )

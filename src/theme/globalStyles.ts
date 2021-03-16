@@ -4,7 +4,7 @@ import { ThemeType } from './theme';
 export default createGlobalStyle<{ theme: ThemeType }>`
   body {
     font-size: 16px;
-    font-family:  system-ui;
+    font-family: Lato;
     margin: 0;
     padding: 0;
     background-color: ${({ theme }) => theme.colors.backgroundColor};

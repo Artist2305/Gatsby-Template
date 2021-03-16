@@ -116,23 +116,25 @@ export default function Layout({ children }) {
 
   const navLinksData = [
     {id: 1, name: intl.formatMessage({ id: "home" }), slug: "/Home"},
-    {id: 2, name: intl.formatMessage({ id: "blog" }), slug: "/Blog"},
-    {id: 3, name: intl.formatMessage({ id: "galleries" }), slug: "/Galleries"},
-    {id: 4, name: intl.formatMessage({ id: "grids" }), slug: "/Grids"},
-    {id: 5, name: intl.formatMessage({ id: "menus" }), slug: "/Menus"},
-    {id: 6, name: intl.formatMessage({ id: "footers" }), slug: "/Footers"},
+    {id: 2, name: intl.formatMessage({ id: "blog" }), slug: "/mdblog"},
+    {id: 3, name: intl.formatMessage({ id: "blog" }), slug: "/contentfulblog"},
+    {id: 4, name: intl.formatMessage({ id: "galleries" }), slug: "/Galleries"},
+    {id: 5, name: intl.formatMessage({ id: "grids" }), slug: "/Grids"},
+    {id: 6, name: intl.formatMessage({ id: "menus" }), slug: "/Menus"},
+    {id: 7, name: intl.formatMessage({ id: "footers" }), slug: "/Footers"},
   ]
   
   const footerLinksData = [
     {id: 1, name: "Home", slug: "/Home"},
-    {id: 2, name: "Blog", slug: "/Blog"},
-    {id: 3, name: "Gallery", slug: "/Gallery"},
-    {id: 4, name: "Cards", slug: "/Cards"},
-    {id: 5, name: "About", slug: "/About"},
-    {id: 6, name: "Contact", slug: "/Contact"},
-    {id: 7, name: "Cooperation", slug: "/Cooperation"},
-    {id: 8, name: "Help", slug: "/Help"},
-    {id: 9, name: "Privacy", slug: "/Privacy"},
+    {id: 2, name: "MD Blog", slug: "/mdblog"},
+    {id: 3, name: "Contentful Blog", slug: "/contentfulblog"},
+    {id: 4, name: "Gallery", slug: "/Gallery"},
+    {id: 5, name: "Cards", slug: "/Cards"},
+    {id: 6, name: "About", slug: "/About"},
+    {id: 7, name: "Contact", slug: "/Contact"},
+    {id: 8, name: "Cooperation", slug: "/Cooperation"},
+    {id: 9, name: "Help", slug: "/Help"},
+    {id: 10, name: "Privacy", slug: "/Privacy"},
   ]
 
   const navLinks = navLinksData.map(s => <NavLink key={s.id} to={s.slug}>{s.name}</NavLink>);
