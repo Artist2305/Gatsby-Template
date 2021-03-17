@@ -61,7 +61,7 @@ const Md_post_list: React.FC = (props) => {
         keywords="gatsby, template, site, static, blog, markdown"
         author="Mateusz Szostek" />
 
-        <h1 className="text-2xl">List of blog posts created by using markdown files</h1>
+        <h2 className="text-3xl font-semibold my-1">List of blog posts created by using markdown files</h2>
         <BlogGrid>
           <div className="sm:col-span-12 md:col-span-12 lg:col-span-8">
           {

@@ -60,7 +60,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   paginate({
     createPage,
     items: resPost.data.allMarkdownRemark.edges,
-    itemsPerPage: 5,
+    itemsPerPage: 3,
     pathPrefix: '/mdblog',
     component: path.resolve(`./src/templates/md_post_list.tsx`)
   });

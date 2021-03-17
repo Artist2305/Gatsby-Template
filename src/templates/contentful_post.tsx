@@ -47,7 +47,7 @@ const contentful_post: React.FC = (props) => {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: node => {
         console.log(node)
-        return <Img style={{width: "400px", height: "400px"}} fluid={node.data.target.fluid} />
+        return <Img style={{width: "100%", height: "600px"}} fluid={node.data.target.fluid} />
       }
     }
   }
@@ -66,13 +66,13 @@ const contentful_post: React.FC = (props) => {
         keywords={props.data.contentfulContenfulBlogPost.keywords}
         author={props.data.contentfulContenfulBlogPost.author} />
         
-        <h1>{props.data.contentfulContenfulBlogPost.title}</h1>
-        <h2> {props.data.contentfulContenfulBlogPost.publishedDate}</h2>
+        <h2  className="text-3xl font-semibold my-1">{props.data.contentfulContenfulBlogPost.title}</h2>
+        <p className="font-semibold mb-2"> {props.data.contentfulContenfulBlogPost.publishedDate}</p>
+        <div className="blog-post-content rounded-md bg-white bg-opacity-30 p-5">
         {
-          
           output
-        }
-        <h2>Written by {props.data.contentfulContenfulBlogPost.author}</h2>      
+        }  
+        </div>
       </Layout>
     )
   }

@@ -18,7 +18,7 @@ import {
 import Background from '../components/Background';
 import SimpleReactLightbox from 'simple-react-lightbox'
 import {Spring} from 'react-spring/renderprops'
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+import Parallax from 'react-rellax';
 
 import {H1, H3} from "./typography";
 
@@ -111,7 +111,6 @@ const FormLabel = tw.label`
 
 
 export default function Layout({ children }) {
-
   const intl = useIntl()
   const locale = intl.locale !== "en" ? `/${intl.locale}` : ""
   const { themeMode } = useSelector(uiSelector);
@@ -124,6 +123,7 @@ export default function Layout({ children }) {
     {id: 5, name: intl.formatMessage({ id: "grids" }), slug: "/Grids"},
     {id: 6, name: intl.formatMessage({ id: "menus" }), slug: "/Menus"},
     {id: 7, name: intl.formatMessage({ id: "footers" }), slug: "/Footers"},
+    {id: 8, name: intl.formatMessage({ id: "parallax" }), slug: "/ParallaxEffect"},
   ]
   
   const footerLinksData = [
