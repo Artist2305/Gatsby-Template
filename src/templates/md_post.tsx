@@ -52,13 +52,12 @@ const Md_post: React.FC = (props) => {
         keywords={props.data.markdownRemark.frontmatter.keywords}
         author={props.data.markdownRemark.frontmatter.author} />
         
-        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-        <h2> {props.data.markdownRemark.frontmatter.date} , {props.data.markdownRemark.frontmatter.readTime} of reading</h2>
+        <h2 className="text-3xl font-semibold my-1">{props.data.markdownRemark.frontmatter.title}</h2>
+        <p className="font-semibold mb-2"> {props.data.markdownRemark.frontmatter.date} , {props.data.markdownRemark.frontmatter.readTime} of reading</p>
         <div
-            className="blog-post-content"
+            className="blog-post-content rounded-md bg-white bg-opacity-30 p-5"
             dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-          />
-        <h2>Written by {props.data.markdownRemark.frontmatter.author}</h2>      
+          />    
       </Layout>
     )
   }
