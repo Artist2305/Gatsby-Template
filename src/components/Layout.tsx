@@ -15,12 +15,15 @@ import {
   InstagramIcon,
   LinkedinIcon
 } from '../components/icons/index';
+import Background from '../components/Background';
 import SimpleReactLightbox from 'simple-react-lightbox'
+import {Spring} from 'react-spring/renderprops'
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 
 import {H1, H3} from "./typography";
 
 const AppWrapper = tw.div`
-  flex flex-col items-center 
+  flex flex-col items-center z-10 relative
 `
 const Wrapper = tw.div`
   flex flex-col container px-3 sm:p-3
@@ -35,14 +38,12 @@ const TopWrapper = tw(Wrapper)`
 const BottomWrapper = tw.div`
   py-5 grid gap-6  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 container
 `;
-
 const LinksWrapper = tw.div`
   grid py-2 grid-cols-2 
 `;
 const SocialMediaWrapper = tw.div`
   flex flex-col gap-3
 `
-
 const SocialMediaRow = tw.div`
   flex flex-row gap-3
 `
@@ -145,13 +146,18 @@ export default function Layout({ children }) {
     <ThemeProvider theme={Theme[themeMode]}>
       <SimpleReactLightbox>
       <GlobalStyles/>
+      
       <AppWrapper>
         <TopWrapper>
           <div className="flex-none w-42 h-16">
             <header>
               <Header>
                 <Logo/>
-                <H1>Gatsby Static <br/> Site Template</H1>
+                <Spring
+                from={{opacity:0}}
+                to={{opacity:1}}>
+                {props => <H1 style={props}>Gatsby Static <br/> Site Template</H1> }
+                </Spring>
               </Header>
             </header>
           </div>

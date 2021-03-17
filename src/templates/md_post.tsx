@@ -19,21 +19,29 @@ query ($slug: String, $postImage: String) {
       postImage {
         name
         extension
+        childImageSharp {
+          fluid {
+            base64
+            tracedSVG
+            srcWebp
+            srcSetWebp
+            originalImg
+            originalName
+          }
+        }
       }
     }
     html
   }
   imageSharp(fluid: {originalName: {eq: $postImage}}) {
     fluid {
-      base64
-      tracedSVG
-      srcWebp
-      srcSetWebp
-      originalImg
-      originalName
+      ...GatsbyImageSharpFluid
     }
   }
 }`
+
+
+
 
 const Md_post: React.FC = (props) => {
   console.log(props);
