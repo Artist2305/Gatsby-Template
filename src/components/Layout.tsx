@@ -153,11 +153,7 @@ export default function Layout({ children }) {
             <header>
               <Header>
                 <Logo/>
-                <Spring
-                  from={{opacity:0}}
-                  to={{opacity:1}}>
-                  {props => <H1 style={props}>Gatsby Static <br/> Site Template</H1> }
-                </Spring>
+                  <H1>Gatsby Static <br/> Site Template</H1> 
               </Header>
             </header>
           </div>
