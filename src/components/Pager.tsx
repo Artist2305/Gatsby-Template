@@ -1,24 +1,16 @@
 import React, { useState, useEffect }  from 'react';
 import { Link } from "gatsby-plugin-intl"
 import tw from 'twin.macro';
-
 const PaginationButton = tw(Link)`text-center shadow-md rounded-md  outline-none duration-200 p-3
 hover:(cursor-pointer bg-white bg-opacity-50)`;
-
 const DisabledButton = tw(PaginationButton)`
   hover:(cursor-default bg-gray-900 bg-opacity-30) bg-gray-900 bg-opacity-30 pointer-events-none
 `
-
 const Pager: React.FC = (props) => {
-
   const { previousPagePath, nextPagePath, numberOfPages, humanPageNumber } = props.pageContext;
-  console.log(props)
-  console.log(previousPagePath)
-
   const pageList =[
     {id:1, slug:"/mdblog"}
   ];
-
   function generateSlugs()
   {
     for(var i = 0; i< numberOfPages; i++)
@@ -28,8 +20,6 @@ const Pager: React.FC = (props) => {
     }
   }
   generateSlugs();
-  console.log(pageList);
-
   return (
     <div className="mb-5">
       {previousPagePath != "" ?
@@ -48,5 +38,4 @@ const Pager: React.FC = (props) => {
     </div>
   )
 }
-
 export default Pager;

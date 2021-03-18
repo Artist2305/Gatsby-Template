@@ -3,15 +3,10 @@ import Layout from "../components/Layout";
 import Head from "../components/Head";
 import styled, { css } from 'styled-components';
 import tw from 'twin.macro'; 
-import { useIntl, Link } from "gatsby-plugin-intl"
-import {H1, H3} from "../components/typography";
 import Parallax from 'react-rellax';
-
-
 const Grid = tw.div`
   grid grid-cols-6 mb-20 gap-2
 `;
-
 const Card = styled.div((color) => 
   tw`w-full h-56 opacity-50 rounded-xl`,
   css`
@@ -43,8 +38,6 @@ const cardList = [
 
 
 const ParallaxEffect : React.FC = ({ }) => {
-  const intl = useIntl()
-  const locale = intl.locale !== "en" ? `/${intl.locale}` : ""
   return (
     <Layout>
         <Head 

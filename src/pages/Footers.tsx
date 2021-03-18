@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout";
 import Head from "../components/Head";
 
-const Footers : React.FC = ({ }) => {
+const Footers : React.FC = () => {
   return (
     <Layout>
        <Head 

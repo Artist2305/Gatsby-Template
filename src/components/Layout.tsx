@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import styled, { css } from 'styled-components';
-import tw from 'twin.macro'; // eslint-disable-line import/no-extraneous-dependencies
+import tw from 'twin.macro'; 
 import { ThemeProvider } from 'styled-components';
 import * as Theme from './../theme/theme';
 import GlobalStyles from './../theme/globalStyles';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector} from 'react-redux';
 import { uiSelector } from '../state/ui';
 import { Link as GatsbyLink } from "gatsby";
 import { useIntl, Link } from "gatsby-plugin-intl"
@@ -70,7 +70,6 @@ export default function Layout({ children }) {
   }
 
   let handleClickMenuBtn = () => {
-    console.log(getWidth());
     if (getWidth() < 1200) {
       if (!menuOpen) {
         setMenuOpen(true)

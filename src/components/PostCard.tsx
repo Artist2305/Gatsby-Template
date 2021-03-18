@@ -1,9 +1,8 @@
 import React from 'react';
 import Img from 'gatsby-image'
-import { useStaticQuery, graphql, Link as GatsbyLink} from 'gatsby';
-import { useIntl, Link } from "gatsby-plugin-intl"
+import { Link } from "gatsby-plugin-intl"
 import tw from 'twin.macro';
-import styled, { css }from 'styled-components';
+import { GatsbyImage } from "gatsby-plugin-image"
 
 interface Props {
   image: any,
@@ -13,10 +12,7 @@ interface Props {
   date: string,
   slug: string,
 }
-
 const CardWrapper = tw.div`bg-white bg-opacity-30 my-5 p-4 rounded-md md:(flex flex-row) z-0`;
-
-
 const Row = tw.div`
   md:(flex flex-row)`
 const Col = tw.div`
@@ -30,12 +26,11 @@ const PostTitle = tw.h3`
 const ReadMore = tw(Link)`
   text-blue-800 absolute -bottom-1`
 
-
-const PostCard: React.FC<Props> =  ({tags, title, desc, date, slug, image }) => {
+const PostCard: React.FC<Props> = ({ tags, title, desc, date, slug, image }) => {
   return (
     <CardWrapper>
       <div className="h-56 w-100 md:h-48 md:w-56 md:mr-3">
-          <Img fluid={image} className="h-56 w-100 md:h-48 md:w-56 rounded-md"/>
+        <GatsbyImage image={image} alt="Blog post image" className="h-56 w-100 md:h-48 md:w-56 rounded-md" />
       </div>
       <Col>
         <Row>

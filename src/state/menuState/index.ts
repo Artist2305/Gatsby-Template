@@ -46,6 +46,5 @@ export const toogleBtnIcon = (): Thunk => (dispatch: Dispatch) => {
 }
 export const switchOffMenu = (): Thunk => (dispatch: Dispatch) => {
   const icon = MenuState.CLOSE;
-  console.log(icon);
   dispatch(setBtnIcon(icon));
 }

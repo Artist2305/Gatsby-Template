@@ -22,6 +22,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-offline`,
     "gatsby-plugin-postcss",
     "gatsby-plugin-styled-components",
     'gatsby-plugin-typescript',
@@ -35,9 +36,9 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -53,20 +54,13 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        // CommonMark mode (default: true)
         commonmark: true,
-        // Footnotes mode (default: true)
         footnotes: true,
-        // Pedantic mode (default: true)
         pedantic: true,
-        // GitHub Flavored Markdown mode (default: true)
         gfm: true,
-        // Plugins configs
         plugins: [
           // gatsby-remark-relative-images must go before gatsby-remark-images
           {
@@ -127,8 +121,7 @@ module.exports = {
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
       },
-    },
-    
+    }, 
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
