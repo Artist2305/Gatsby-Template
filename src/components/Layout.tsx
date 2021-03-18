@@ -33,17 +33,12 @@ const Logo = tw(LogoIcon)`
 w-16 h-16 mr-2
 `;
 
-const ThemeBtn = tw.button`
-  font-semibold
-`;
-
 const FooterWrapper = styled.footer(() =>
   tw`w-full flex flex-row justify-center p-3`,
   css`
     background-color: ${({ theme }) => theme.colors.elementColor}; 
   `
 );
-
 
 const Btn = tw.button`
   bg-gradient-to-t from-purple-400 to-indigo-400 inline-block w-28 h-8 my-2 text-white rounded-sm font-bold tracking-wider
@@ -66,12 +61,9 @@ const TextArea = styled.textarea(() =>
 
 export default function Layout({ children }) {
   const intl = useIntl()
-  const locale = intl.locale !== "en" ? `/${intl.locale}` : ""
   const { themeMode } = useSelector(uiSelector);
 
   let [menuOpen, setMenuOpen] = useState(false);
-  let [menuClose, setMenuClose] = useState(false);
-  let [menuHover, setMenuHover] = useState(false);
 
   function getWidth() {
     return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
@@ -84,30 +76,8 @@ export default function Layout({ children }) {
         setMenuOpen(true)
       }
       else {
-        console.log("wlaczam sie ");
         setMenuOpen(false);
       }
-    }
-  }
-  let handleMouseEnterMenuBtn = () => {
-    if (!menuHover) {
-      setMenuHover(true);
-    }
-  }
-  let handleMouseLeaveMenuBtn = () => {
-    if (menuHover) {
-      setMenuHover(false);
-    }
-  }
-  let handleClickLinkBtn = () => {
-    if (getWidth() < 1200) {
-      setMenuClose(true);
-      console.log("dzialam");
-      setTimeout(() => {
-        setMenuOpen(false);
-        setMenuClose(false);
-        window.scrollTo(0, 0);
-      }, 0);
     }
   }
 
@@ -118,7 +88,7 @@ export default function Layout({ children }) {
     { id: 4, name: intl.formatMessage({ id: "galleries" }), slug: "/Galleries" },
     { id: 5, name: intl.formatMessage({ id: "grids" }), slug: "/Grids" },
     { id: 6, name: intl.formatMessage({ id: "menus" }), slug: "/Menus" },
-    { id: 7, name: intl.formatMessage({ id: "fooaters" }), slug: "/Footers" },
+    { id: 7, name: intl.formatMessage({ id: "footers" }), slug: "/Footers" },
     { id: 8, name: intl.formatMessage({ id: "parallax" }), slug: "/ParallaxEffect" },
   ]
 

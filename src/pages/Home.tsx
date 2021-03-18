@@ -1,11 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout";
 import Head from "../components/Head";
-import styled, { css } from 'styled-components';
 import tw from 'twin.macro'; 
 import { useIntl, Link } from "gatsby-plugin-intl"
-import {H1, H3} from "../components/typography";
-import LogoImage from ""
+import {H1} from "../components/typography";
 
 const HomeGrid = tw.div`
   grid grid-rows-1 grid-flow-col
@@ -21,9 +19,7 @@ const ContentImg = tw.div`
 `
 
 const Home : React.FC = ({ }) => {
-  console.log(process.env.GATSBY_FIREBASE_API_KEY)
   const intl = useIntl()
-  const locale = intl.locale !== "en" ? `/${intl.locale}` : ""
   return (
     <Layout>
         <Head 
