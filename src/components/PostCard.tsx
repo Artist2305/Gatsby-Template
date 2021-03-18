@@ -14,10 +14,8 @@ interface Props {
   slug: string,
 }
 
-const CardWrapper = styled.div(() =>
-  tw`bg-white bg-opacity-30 my-5 p-4 rounded-md md:(flex flex-row)`,
-  css``
-)
+const CardWrapper = tw.div`bg-white bg-opacity-30 my-5 p-4 rounded-md md:(flex flex-row) z-0`;
+
 
 const Row = tw.div`
   md:(flex flex-row)`

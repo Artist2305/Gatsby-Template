@@ -1,6 +1,7 @@
 {
     "home" : "Strona Główna",
-    "blog" : "Blog",
+    "mdblog" : "MD-Blog",
+    "contentfulblog" : "Con-Blog",
     "galleries" :  "Galerie",
     "grids" : "Siatki", 
     "menus" : "Menus", 
@@ -16,28 +17,7 @@
     "subscribeTitle" : "SUBSKRYBUJ",
     "socialMediaTitle" : "PORTALE SPOŁECZNOŚCIOWE",
     "subscribe" : "Subskrybuj",
-
-    "homeContent" : [
-        {"text" : "This templates includes following features: "},
-        {"text" : "- Tailwind.css"},
-        {"text" : "- Typescript"},
-        {"text" : "- styled components"},
-        {"text" : "- lazy image loading with gatsby-image"},
-        {"text" : "- react helmet"},
-        {"text" : "- blog pages with pagination"},
-        {"text" : "- multilangual system"},
-        {"text" : "- dark/light mode"},
-        {"text" : "- dark/light mode"},
-        {"text" : "- redux "},
-        {"text" : "- contentful integration"},
-        {"text" : "- firebase integration"},
-        {"text" : "- google analitics"},
-        {"text" : "And following ready to use components:"},
-        {"text" : "- images galery"},
-        {"text" : "- serval responssieve grid systems"},
-        {"text" : "- privacy, cooperation, contact, help, about pages"},
-        {"text" : "- full responsive layout"}
-    ],
+    "parallax" : "Paralaksa",
 
     "homeContent1" : "Ten projekt zawiera następujące technologie i pluginy: ",
     "homeContent2" : "- Tailwind.css",
@@ -51,10 +31,10 @@
     "homeContent10" :"- redux ",
     "homeContent11" :"- integracja Contentful",
     "homeContent12" :"- integracja Firebase",
-    "homeContent13" :"- Google Snalitics",
+    "homeContent13" :"- Google Analitics",
     "homeContent14" :"Oraz naztępujące komponenty:",
     "homeContent15" :"- galeria zdjęć",
-    "homeContent16" :"- responsywne sieatki",
+    "homeContent16" :"- responsywne siatki",
     "homeContent17" :"- podstrony: prywatność, współpraca, kontakt, pomoc, o nas",
     "homeContent18" :"- pełna responsywność"
 }
