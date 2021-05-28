@@ -11,8 +11,7 @@ jobs:
       - uses: jakejarvis/wait-action@master
         with:
           time: "5m"
-        with:
-          feed_list: "https://whitep4nth3r.com/feed.xml"
+
           commit_message: "Updated README with latest blog posts"
           
           
