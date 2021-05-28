@@ -12,7 +12,6 @@ jobs:
         with:
           time: "5m"
 
-          commit_message: "Updated README with latest blog posts"
           
           
           
