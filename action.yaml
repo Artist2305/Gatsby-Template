@@ -100,7 +100,6 @@ outputs:
 
 runs:
   using: node12
-  main: blog-post-workflow.js
 branding:
   icon: 'activity'
   color: 'blue'
