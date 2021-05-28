@@ -1,4 +1,3 @@
-# Example of a scheduled job that commits new data file
 
 name: append every three mins
 
