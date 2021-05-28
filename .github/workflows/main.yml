@@ -11,7 +11,7 @@ jobs:
       - uses: jakejarvis/wait-action@master
         with:
           time: "5m"
-      - uses: MateuszSzostek/Gatsby-Template@master
+      - uses: MateuszSzostek/Gatsby-Template@main
         with:
           feed_list: "https://whitep4nth3r.com/feed.xml"
           commit_message: "Updated README with latest blog posts"
