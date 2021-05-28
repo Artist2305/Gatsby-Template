@@ -1,11 +1,10 @@
 
-name: append every three mins
+name: Rebuild Page
 
 # Schedule a job
 on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '*/5 * * * *'
+  repository_dispatch:
+    types: [contentful.deploy]
   push:
     branches: [ main ]
 
