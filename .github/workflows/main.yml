@@ -9,6 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: jakejarvis/wait-action@master
+      - uses: MateuszSzostek/Gatsby-Template@main
+        with:
+          commit_message: "Updated README with latest blog posts"
 
           
           
