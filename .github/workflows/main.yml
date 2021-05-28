@@ -1,10 +1,10 @@
-name: Contentful Update Workflow
+name: Latest blog post workflow
 on:
   repository_dispatch:
     types: [contentful.deploy]
 jobs:
   update-readme-with-blog:
-    name: Update this repo's README with latestcontent change
+    name: Update this repo's README with latest blog posts
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,3 +15,8 @@ jobs:
         with:
           feed_list: "https://whitep4nth3r.com/feed.xml"
           commit_message: "Updated README with latest blog posts"
+          
+          
+          
+          
+    
